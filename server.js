@@ -27,7 +27,32 @@ app.get("/api/notes", (req, res) => {
   });
 });
 
-app.post
+app.post("/api/notes", (req, res) => {
+  fs.readFile('db/db.json', 'utf8', (err, data) => {
+    if (err) throw err;
+    const notes = JSON.parse(data);
+    const newNote = req.body;
+    newNote.id = notes.length + 1;
+    notes.push(newNote);
+    fs.writeFile('db/db.json', JSON.stringify(notes), (err) => {
+      if (err) throw err;
+      res.json(newNote);
+    });
+  });
+});
+
+app.delete("/api/notes/:id", (req, res) => {
+  fs.readFile('db/db.json', 'utf8', (err, data) => {
+    if (err) throw err;
+    const notes = JSON.parse(data);
+    const updatedNotes = notes.filter(note => note.id != parseInt(req.params.id));
+    fs.writeFile('db/db.json', JSON.stringify(updatedNotes), (err) => {
+      if (err) throw err;
+      res.json(updatedNotes);
+    });
+  });
+});
+
 
 
 // const notesRouter = require('./routes/note');
