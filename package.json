@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Katherine-Be/Noted#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mysql2": "^3.10.1"
   }
 }
