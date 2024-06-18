@@ -27,6 +27,9 @@ app.get("/api/notes", (req, res) => {
   });
 });
 
+app.post
+
+
 // const notesRouter = require('./routes/note');
 // app.use('/note', notesRouter);
 
