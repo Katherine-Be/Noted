@@ -53,7 +53,9 @@ app.delete("/api/notes/:id", (req, res) => {
   });
 });
 
-
+app.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000')
+});
 
 // const notesRouter = require('./routes/note');
 // app.use('/note', notesRouter);
@@ -69,6 +71,3 @@ app.delete("/api/notes/:id", (req, res) => {
 
 
 
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000')
-});

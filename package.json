@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Katherine-Be/Noted/issues"
   },
-  "homepage": "https://github.com/Katherine-Be/Noted#readme",
+  "homepage": "https://github.com/Katherine-Be/Noted",
   "dependencies": {
     "express": "^4.19.2"
   }
